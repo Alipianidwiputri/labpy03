@@ -62,12 +62,12 @@ Saya akan menjelaskan alur algoritma dari kode tersebut secara terstruktur:
     
  2. Program akan terus menghasilkan angka random sampai mendapatkan N buah angka yang nilainya < 0.5
     
-          - Jika angka random ≥ 0.5: diabaikan dengan generate angka baru
-          - jika angka random < 0.5: dicetak dengan counter bertambah
+    - Jika angka random ≥ 0.5: diabaikan dengan generate angka baru
+    - jika angka random < 0.5: dicetak dengan counter bertambah
        
  3. Dari output yang terlihat:
-          - User memasukan N = 5
-          - Program menghasilkan 5 angka random < 0.5:
+    - User memasukan N = 5
+    - Program menghasilkan 5 angka random < 0.5:
  ```
             data ke: 1 => 0.22422725915012398
             data ke: 2 => 0.08143383880445236
