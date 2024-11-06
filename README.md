@@ -28,6 +28,7 @@ Saya akan menjelaskan alur algoritma dari kode tersebut secara terstruktur:
       - Tampilkan "Selesai"
 
      Flowchart algoritma:
+     
      ```
      Start
         ↓
@@ -57,15 +58,15 @@ Saya akan menjelaskan alur algoritma dari kode tersebut secara terstruktur:
      ```
 
      **Penjelasan Detail**
-     1. Program meminta user memasukan nilai N yang menentukan berapa banyak angka random < 0.5 yang di inginkan
+      1. Program meminta user memasukan nilai N yang menentukan berapa banyak angka random < 0.5 yang di inginkan
     
-     2. Program akan terus menghasilkan angka random sampai mendapatkan N buah angka yang nilainya < 0.5
-        - Jika angka random ≥ 0.5: diabaikan dengan generate angka baru
-        - jika angka random < 0.5: dicetak dengan counter bertambah
+      2. Program akan terus menghasilkan angka random sampai mendapatkan N buah angka yang nilainya < 0.5
+          - Jika angka random ≥ 0.5: diabaikan dengan generate angka baru
+          - jika angka random < 0.5: dicetak dengan counter bertambah
        
-     3. Dari output yang terlihat:
-        - User memasukan N = 5
-        - Program menghasilkan 5 angka random < 0.5:
+      3. Dari output yang terlihat:
+          - User memasukan N = 5
+          - Program menghasilkan 5 angka random < 0.5:
           ```
           data ke: 1 => 0.22422725915012398
           data ke: 2 => 0.08143383880445236
@@ -151,12 +152,12 @@ Flowchart algoritma:
     [Update total_laba]
           ↓
 ┌─────────────────────┐
-│ For each laba      │
+│    For each laba    │
 └─────────┬───────────┘
           ↓
-    [Tampilkan laba per bulan]
+ [Tampilkan laba per bulan]
           ↓
-[Tampilkan total laba]
+   [Tampilkan total laba]
           ↓
          End
 ```
@@ -190,16 +191,16 @@ Program ini mendemonstrasikan konsep:
 
  # LATIHAN 3
   
-
+![Codingan 3](https://github.com/user-attachments/assets/5855b19f-65d9-44c3-b0a0-e6b34816bcb1)
 
 1. **Inisialisasi Program**
-   python
+   ```python
    def atm_simulator():
        saldo = 1000000  # Saldo awal
-   
+   ```
 
-2. *Alur Utama*
-   
+2. **Alur Utama**
+   ```
    LOOP Program ATM:
        1. Tampilkan menu:
           - 1. Tarik Uang
@@ -225,14 +226,15 @@ Program ini mendemonstrasikan konsep:
           
           DEFAULT:
              Tampilkan "Pilihan tidak valid!"
+   ```
    
 
 Flowchart algoritma:
-
-Start
-   ↓
+```
+        Start
+          ↓
 [Inisialisasi saldo]
-   ↓
+          ↓
 ┌─────────────────────┐
 │ Loop ATM Program   │←─────────┐
 └─────────┬───────────┘         │
@@ -243,22 +245,22 @@ Start
           ↓                     │
     [Cek Pilihan]               │
           ↓                     │
-    ┌─────────────────┐         │
-    │ Pilihan = 1     │──→[Input Jumlah]    
-    │ Pilihan = 2     │──→[Tampil Terima Kasih]→[Exit]
-    │ Pilihan Invalid │──→[Tampil Error]     │
-    └────────┬────────┘         │
-             ↓                  │
-    [Validasi Jumlah]          │
+ ┌─────────────────┐            │
+ │ Pilihan = 1     │──→[Input Jumlah]    
+ │ Pilihan = 2     │──→[Tampil Terima Kasih]→[Exit]
+ │ Pilihan Invalid │──→[Tampil Error]
+ └────────┬────────┘            │
           ↓                     │
-    [Update Saldo]             │
+    [Validasi Jumlah]           │
           ↓                     │
-    [Tampil Status]            │
+    [Update Saldo]              │
+          ↓                     │
+    [Tampil Status]             │
           └─────────────────────┘
 
-
-*Output Program yang terlihat:*
-
+```
+**Output Program yang terlihat:**
+```
 Saldo saat ini: Rp 1000000
 1. Tarik Uang
 2. Keluar
@@ -271,21 +273,21 @@ Saldo saat ini: Rp 500000
 2. Keluar
 Pilih menu (1/2): 2
 Terima kasih telah menggunakan ATM!
+```
 
-
-*Penjelasan Detail:*
-1. *Struktur Data*
+**Penjelasan Detail:**
+1. **Struktur Data**
    - Variabel saldo: menyimpan saldo rekening
    - Variabel pilihan: menyimpan pilihan menu
    - Variabel jumlah: menyimpan jumlah penarikan
 
-2. *Validasi*
+2. **Validasi**
    - Validasi pilihan menu (harus 1 atau 2)
    - Validasi jumlah penarikan:
      * Tidak boleh melebihi saldo
      * Tidak boleh negatif atau nol
 
-3. *Fitur*
+3. **Fitur**
    - Cek saldo
    - Penarikan uang
    - Keluar dari program
