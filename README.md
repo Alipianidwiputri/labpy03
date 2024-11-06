@@ -56,26 +56,27 @@ Saya akan menjelaskan alur algoritma dari kode tersebut secara terstruktur:
               ↓
              End
      ```
-
-     **Penjelasan Detail**
-      1. Program meminta user memasukan nilai N yang menentukan berapa banyak angka random < 0.5 yang di inginkan
+ **Penjelasan Detail**
+ 
+ 1. Program meminta user memasukan nilai N yang menentukan berapa banyak angka random < 0.5 yang di inginkan
     
-      2. Program akan terus menghasilkan angka random sampai mendapatkan N buah angka yang nilainya < 0.5
+ 2. Program akan terus menghasilkan angka random sampai mendapatkan N buah angka yang nilainya < 0.5
+    
           - Jika angka random ≥ 0.5: diabaikan dengan generate angka baru
           - jika angka random < 0.5: dicetak dengan counter bertambah
        
-      3. Dari output yang terlihat:
+ 3. Dari output yang terlihat:
           - User memasukan N = 5
           - Program menghasilkan 5 angka random < 0.5:
-          ```
-          data ke: 1 => 0.22422725915012398
-          data ke: 2 => 0.08143383880445236
-          data ke: 3 => 0.29455614142741193
-          data ke: 4 => 0.12537763804880175
-          data ke: 5 => 0.46041201475820446
-          ```
+ ```
+            data ke: 1 => 0.22422725915012398
+            data ke: 2 => 0.08143383880445236
+            data ke: 3 => 0.29455614142741193
+            data ke: 4 => 0.12537763804880175
+            data ke: 5 => 0.46041201475820446
+  ```
 
-     4. Setelah mendapatkan 5 angka yang memenuhi syarat, program selesai dan mencetak "Selesai"
+ 4. Setelah mendapatkan 5 angka yang memenuhi syarat, program selesai dan mencetak "Selesai"
     
      Program ini mendemonstrasikan konsep:
       - perulangan dengan kondisi (while loop)
@@ -83,14 +84,14 @@ Saya akan menjelaskan alur algoritma dari kode tersebut secara terstruktur:
       - pembangkitan angka random
       - Pencacahan (counter)
       - Format string untuk output
-    
       - Saya akan menjelaskan alur algoritma dari kode perhitungan laba tersebut:
-    
-     # LATIHAN 2
 
-     ![Codingan 2](https://github.com/user-attachments/assets/c1b807a4-b9e6-4c10-a589-9ffd998d6200)
+ # LATIHAN 2
 
-     1. **Inisialisasi**
+ 
+   ![Codingan 2](https://github.com/user-attachments/assets/c1b807a4-b9e6-4c10-a589-9ffd998d6200)
+
+1. **Inisialisasi**
    ```python
    laba_bulanan = []  # Array kosong untuk menyimpan laba per bulan
    total_laba = 0     # Variabel untuk menyimpan total laba
