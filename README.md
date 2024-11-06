@@ -87,5 +87,217 @@ Saya akan menjelaskan alur algoritma dari kode tersebut secara terstruktur:
     
      # LATIHAN 2
 
+     ![Codingan 2](https://github.com/user-attachments/assets/c1b807a4-b9e6-4c10-a589-9ffd998d6200)
+
+     1. **Inisialisasi**
+   ```python
+   laba_bulanan = []  # Array kosong untuk menyimpan laba per bulan
+   total_laba = 0     # Variabel untuk menyimpan total laba
+   modal_awal = 100000000  # Modal awal (tersirat dari output)
+   ```
+
+2. **Proses Perhitungan Laba (Loop pertama)**
+   ```
+   FOR bulan FROM 1 TO 8:
+       1. Set laba = 0
+       
+       2. Hitung laba berdasarkan bulan:
+          IF bulan <= 2:           # Bulan 1-2
+             laba = 0
+          ELSE IF bulan <= 4:      # Bulan 3-4
+             laba = modal_awal * 1% (0.01)
+          ELSE IF bulan <= 7:      # Bulan 5-7
+             laba = modal_awal * 5% (0.05)
+          ELSE:                    # Bulan 8
+             laba = modal_awal * 2% (0.02)
+       
+       3. Simpan laba ke array laba_bulanan
+       4. Tambahkan laba ke total_laba
+   ```
+
+3. **Proses Menampilkan Hasil (Loop kedua)**
+   ```
+   FOR bulan, laba IN laba_bulanan:
+       Tampilkan "laba bulan ke-{bulan} sebesar: {laba}"
+   
+   Tampilkan "Total laba adalah: {total_laba}"
+   ```
+
+Flowchart algoritma:
+```
+        Start
+          ↓
+[Inisialisasi variabel]
+          ↓
+┌─────────────────────┐
+│ For bulan 1 to 8    │
+└─────────┬───────────┘
+          ↓
+    [Set laba = 0]
+          ↓
+    [Cek kondisi bulan]
+          ↓
+ ┌─────────────────┐
+ │ Bulan 1-2: 0%   │
+ │ Bulan 3-4: 1%   │
+ │ Bulan 5-7: 5%   │
+ │ Bulan 8: 2%     │
+ └────────┬────────┘
+          ↓
+    [Hitung laba]
+          ↓
+    [Simpan ke array]
+          ↓
+    [Update total_laba]
+          ↓
+┌─────────────────────┐
+│ For each laba      │
+└─────────┬───────────┘
+          ↓
+    [Tampilkan laba per bulan]
+          ↓
+[Tampilkan total laba]
+          ↓
+         End
+```
+
+**Output Program:**
+```
+laba bulan ke- 1 sebesar: 0
+laba bulan ke- 2 sebesar: 0
+laba bulan ke- 3 sebesar: 1000000.0
+laba bulan ke- 4 sebesar: 1000000.0
+laba bulan ke- 5 sebesar: 5000000.0
+laba bulan ke- 6 sebesar: 5000000.0
+laba bulan ke- 7 sebesar: 5000000.0
+laba bulan ke- 8 sebesar: 2000000.0
+Total laba adalah: 19000000.0
+```
+
+**Penjelasan Logika Bisnis:**
+1. Bulan 1-2: Belum ada laba (0%)
+2. Bulan 3-4: Laba 1% dari modal
+3. Bulan 5-7: Laba meningkat jadi 5% dari modal
+4. Bulan 8: Laba turun menjadi 2% dari modal
+
+Program ini mendemonstrasikan konsep:
+- Array dan operasi append
+- Perulangan (for loop)
+- Pengambilan keputusan berjenjang (if-elif-else)
+- Perhitungan persentase
+- Akumulasi nilai
+- Format string untuk output
+
+ # LATIHAN 3
+  
+
+
+1. **Inisialisasi Program**
+   python
+   def atm_simulator():
+       saldo = 1000000  # Saldo awal
+   
+
+2. *Alur Utama*
+   
+   LOOP Program ATM:
+       1. Tampilkan menu:
+          - 1. Tarik Uang
+          - 2. Keluar
+       
+       2. Minta input pilihan menu (1/2)
+       
+       3. CASE Pilihan:
+          CASE "1" (Tarik Uang):
+             a. Minta input jumlah penarikan
+             b. Validasi penarikan:
+                IF jumlah > saldo:
+                   Tampilkan "Maaf, saldo tidak mencukupi!"
+                ELSE IF jumlah <= 0:
+                   Tampilkan "Jumlah penarikan tidak valid!"
+                ELSE:
+                   Kurangi saldo dengan jumlah penarikan
+                   Tampilkan "Penarikan berhasil!"
+          
+          CASE "2" (Keluar):
+             a. Tampilkan "Terima kasih telah menggunakan ATM!"
+             b. Keluar dari program (break)
+          
+          DEFAULT:
+             Tampilkan "Pilihan tidak valid!"
+   
+
+Flowchart algoritma:
+
+Start
+   ↓
+[Inisialisasi saldo]
+   ↓
+┌─────────────────────┐
+│ Loop ATM Program   │←─────────┐
+└─────────┬───────────┘         │
+          ↓                     │
+    [Tampilkan Menu]            │
+          ↓                     │
+    [Input Pilihan]             │
+          ↓                     │
+    [Cek Pilihan]               │
+          ↓                     │
+    ┌─────────────────┐         │
+    │ Pilihan = 1     │──→[Input Jumlah]    
+    │ Pilihan = 2     │──→[Tampil Terima Kasih]→[Exit]
+    │ Pilihan Invalid │──→[Tampil Error]     │
+    └────────┬────────┘         │
+             ↓                  │
+    [Validasi Jumlah]          │
+          ↓                     │
+    [Update Saldo]             │
+          ↓                     │
+    [Tampil Status]            │
+          └─────────────────────┘
+
+
+*Output Program yang terlihat:*
+
+Saldo saat ini: Rp 1000000
+1. Tarik Uang
+2. Keluar
+Pilih menu (1/2): 1
+Masukkan jumlah penarikan: 500000
+Penarikan berhasil!
+
+Saldo saat ini: Rp 500000
+1. Tarik Uang
+2. Keluar
+Pilih menu (1/2): 2
+Terima kasih telah menggunakan ATM!
+
+
+*Penjelasan Detail:*
+1. *Struktur Data*
+   - Variabel saldo: menyimpan saldo rekening
+   - Variabel pilihan: menyimpan pilihan menu
+   - Variabel jumlah: menyimpan jumlah penarikan
+
+2. *Validasi*
+   - Validasi pilihan menu (harus 1 atau 2)
+   - Validasi jumlah penarikan:
+     * Tidak boleh melebihi saldo
+     * Tidak boleh negatif atau nol
+
+3. *Fitur*
+   - Cek saldo
+   - Penarikan uang
+   - Keluar dari program
+
+Program ini mendemonstrasikan konsep:
+- Function definition
+- Loop control (break)
+- Conditional statements (if-elif-else)
+- Input/output handling
+- Basic error handling
+- Variable manipulation
+- Menu-driven interface
+
      
     
